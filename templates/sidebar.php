@@ -15,10 +15,10 @@
                 Apps
             </li>
             <li class="active-page">
-                <a href="index.html" class="active"><i class="material-icons-two-tone">dashboard</i>Dashboard</a>
+                <a href="home" class="active"><i class="material-icons-two-tone">dashboard</i>Dashboard</a>
             </li>
             <li>
-                <a href="mailbox.html"><i class="material-icons-two-tone">inbox</i>Data Pasien</a>
+                <a href="datapasien"><i class="material-icons-two-tone">inbox</i>Data Pasien</a>
             </li>
             <li>
                 <a href="file-manager.html"><i class="material-icons-two-tone">cloud_queue</i>Kunjungan Pasien</a>

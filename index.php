@@ -21,7 +21,8 @@
     <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/plugins/perfectscroll/perfect-scrollbar.css" rel="stylesheet">
     <link href="assets/plugins/pace/pace.css" rel="stylesheet">
-
+    <link href="assets/plugins/datatables/datatables.min.css" rel="stylesheet">
+    <link href="assets/plugins/highlight/styles/github-gist.css" rel="stylesheet">
     
     <!-- Theme Styles -->
     <link href="assets/css/main.min.css" rel="stylesheet">
@@ -42,7 +43,10 @@
 
         <!-- APP SIDEBAR -->
 
-        <?php include 'templates/sidebar.php'; ?>
+        <?php 
+            include 'connection/conn.php'; 
+            include 'templates/sidebar.php'; 
+        ?>
 
         <!-- APP CONTAINER -->
 
@@ -88,11 +92,11 @@
                     case $me.'/home' :
                         require "pages/home.php";
                         break;
-                    case $me.'/about' :
-                        require "pages/about.php";
+                    case $me.'/datapasien' :
+                        require "pages/datapasien.php";
                         break;
                     case $me.'/contact' :
-                        require "pages/contact.php";
+                        require "pages/tables-basic.php";
                         break;
                     default:
                         require "pages/error.php";
@@ -101,7 +105,7 @@
                 // include 'templates/home.php'; 
             
             ?>
-
+            
             <!-- END SECTION -->
 
         </div>
@@ -110,11 +114,17 @@
     <!-- Javascripts -->
     <script src="assets/plugins/jquery/jquery-3.5.1.min.js"></script>
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/popper.min.js"></script>
     <script src="assets/plugins/perfectscroll/perfect-scrollbar.min.js"></script>
+    <script src="assets/plugins/highlight/highlight.pack.js"></script>
     <script src="assets/plugins/pace/pace.min.js"></script>
     <script src="assets/plugins/apexcharts/apexcharts.min.js"></script>
     <script src="assets/js/main.min.js"></script>
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/pages/dashboard.js"></script>
+    <script src="assets/plugins/datatables/datatables.min.js"></script>
+    <script src="assets/js/pages/datatables.js"></script>
+
+    
 </body>
 </html>
