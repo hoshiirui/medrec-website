@@ -62,8 +62,45 @@
             <?php include 'templates/header.php'; ?>
 
             <!-- APP CONTENT -->
+            
+            <?php 
+            // Define your location project directory in htdocs (EX THE FULL PATH: D:\xampp\htdocs\x-kang\simple-routing-with-php)
+            //  misal mau nambah param di halaman about (bisa pake GET aja).
 
-            <?php include 'templates/home.php'; ?>
+            // Bentuk url nya kyk gini :
+            // localhost/PROJECT_DIR/about?param1=hari rabu&param2=003
+
+            // Cara ngambil data paramya tinggal gini aja:
+            // $p1 = $_GET['param1'];
+            // $p2 = $_GET['param2'];
+
+            // echo $p1 . ' ' . $p2;
+                $project_location = "/MedRec";
+                $me = $project_location;
+
+                // For get URL PATH
+                $request = $_SERVER['REQUEST_URI'];
+
+                switch ($request) {
+                    case $me.'/' :
+                        require "pages/home.php";
+                        break;
+                    case $me.'/home' :
+                        require "pages/home.php";
+                        break;
+                    case $me.'/about' :
+                        require "pages/about.php";
+                        break;
+                    case $me.'/contact' :
+                        require "pages/contact.php";
+                        break;
+                    default:
+                        require "pages/error.php";
+                        break;
+                }
+                // include 'templates/home.php'; 
+            
+            ?>
 
             <!-- END SECTION -->
 

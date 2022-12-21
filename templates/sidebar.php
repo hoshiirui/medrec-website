@@ -1,6 +1,6 @@
 <div class="app-sidebar">
     <div class="logo">
-        <a href="index.html" class="logo-icon"><span class="logo-text">Neptune</span></a>
+        <a href="home" class="logo-icon"><span class="logo-text">ASMedRec</span></a>
         <div class="sidebar-user-switcher user-activity-online">
             <a href="#">
                 <img src="assets/images/avatars/avatar.png">
